@@ -6,6 +6,7 @@
                      ac-source-words-in-same-mode-buffers))
   (add-to-list 'ac-modes 'emacs-lisp-mode)
   (auto-complete-mode 1)
+  (linum-mode 1)
   (hs-minor-mode 1))
 (add-hook 'emacs-lisp-mode-hook 'emacs-lisp-additional)
 (add-to-list 'auto-mode-alist '("\\.el\\'" . emacs-lisp-mode))

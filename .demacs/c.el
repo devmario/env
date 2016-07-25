@@ -42,3 +42,7 @@
 ;; (global-ede-mode 1)
 ;; ;; (ede-cpp-root-project "d-gen" :file "~/" :include-path '("~/"))
 
+(add-hook 'makefile-mode-hook
+          (lambda ()
+            (auto-complete-mode 1)
+            ))

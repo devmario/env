@@ -21,6 +21,9 @@
   (package-refresh-contents))
 
 (auto-install 'load-relative)
+
+(load-relative "./tuhdo_c_ide/init.el")
+
 (load-relative "./default/init.el")
 (load-relative "./auto_complete.el")
 (load-relative "./elisp.el")
@@ -28,4 +31,3 @@
 (load-relative "./web.el")
 (auto-install 'markdown-mode 'jade-mode 'lua-mode)
 
-(load-relative "./tuhdo_c_ide/init.el")

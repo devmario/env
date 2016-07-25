@@ -1,0 +1,37 @@
+#!/bin/bash
+
+export EVENT_NOKQUEUE=1
+_TMUX_SOCK=`echo $TMUX | cut -f1 -d','`
+_TMUX=$TMUX
+_N_SESSION=vbox
+
+tmux_find() {
+    local _LS=$(tmux $@ | grep : | cut -d. -f1 | awk '{print substr($1, 0, length($1)-1)}')
+    echo $_LS
+}
+
+tmux_exe() {
+    export TMUX=
+    if [ -z $_TMUX ]
+    then
+        tmux $@
+    else
+        tmux -S $_TMUX_SOCK $@
+    fi
+    export TMUX=$_TMUX
+}
+
+tmux_create() {
+    local _P=$1
+    local _N=$(basename $1)
+    local _PWD=`pwd`
+    cd $_P
+    tmux_exe new-session -d -s $_N "${_C}" \;  split-window -d -h -t $_N "${_C}"
+    cd $_PWD
+    if [ -z $_TMUX ]
+    then
+      tmux_exe a -t $_N
+    fi
+}
+
+tmux_create $1

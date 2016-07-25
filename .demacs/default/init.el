@@ -1,7 +1,8 @@
 (auto-install 'ggtags 'helm-gtags 'magit 'helm-git 'highlight-current-line 'function-args 'helm-itunes)
 
+(global-linum-mode t)
+
 (require 'highlight-current-line)
-(set-face-background 'highlight-current-line-face "color-18")
 (highlight-current-line-on t)
 
 (setq load-path (cons "/usr/local/share/gtags" load-path))
@@ -121,3 +122,5 @@
  kept-new-versions 6
  kept-old-versions 2
  version-control t)
+
+(load-relative "theme.el")

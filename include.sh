@@ -56,6 +56,7 @@ _HOME=(
     .zshrc
     .tmux.conf
     .demacs
+    .bin
 )
 
 _BASEDIR=$(dirname $0)

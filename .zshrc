@@ -142,4 +142,4 @@ export EVENT_NOKQUEUE=1
 
 export NODE_PATH='/usr/local/lib/node_modules'
 
-export PATH=$PATH:$HOME/.muz/bin
+export PATH=$PATH:$HOME/.muz/bin:$HOME/.bin
