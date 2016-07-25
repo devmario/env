@@ -1,0 +1,3 @@
+[submodule "muz"]
+	path = muz
+	url = http://github.com/devmario/muz

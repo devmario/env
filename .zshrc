@@ -137,11 +137,6 @@ function anybar { echo -n $1 | nc -4u -w0 localhost ${2:-1738}; }
 
 alias ctags="`brew --prefix`/bin/ctags"
 
-muz() {
-    local search_string=$@
-    ~/.search_itunes.js "$search_string" true
-}
-
 export EDITOR='demacs'
 export EVENT_NOKQUEUE=1
 

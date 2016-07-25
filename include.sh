@@ -30,6 +30,8 @@ _BREW=(
     nmap
     watchman
     ffmpeg
+    caskroom/cask/brew-cask
+    iterm2
 )
 
 _BREW_CASK=(
@@ -38,7 +40,6 @@ _BREW_CASK=(
 
 _NPM=(
     vorpal
-    itunes-remote
     babel-cli
     nodemon
 )

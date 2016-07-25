@@ -55,7 +55,9 @@ fi
 echo_stamp "Install sound io from https://github.com/kyleneideck/BackgroundMusic."
 (set -eo pipefail; URL='https://github.com/kyleneideck/BackgroundMusic/archive/master.tar.gz'; \
  cd $(mktemp -d); echo Downloading $URL to $(pwd); curl -qfL# $URL | gzcat - | tar x && \
-    /bin/bash BackgroundMusic-master/build_and_install.sh && rm -rf BackgroundMusic-master)
+     /bin/bash BackgroundMusic-master/build_and_install.sh && rm -rf BackgroundMusic-master)
+
+sh install_muz.sh
 
 _DIR=$HOME/.tmux/plugins/tpm
 if [ -d "$_DIR" ]; then
